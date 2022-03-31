@@ -15,11 +15,11 @@ Essa empresa recebe então os dados do tempo de duração, em horas,  de lâmpad
 
 ![image-20220322172903064](C:\Users\galil\AppData\Roaming\Typora\typora-user-images\image-20220322172903064.png)
 
-Ao todo, o banco de dados contém 40 amostras com os respectivos tempos de duração das lâmpadas A e B. 
+Ao todo, o banco de dados contém 40 entradas com os respectivos tempos de duração das lâmpadas A e B. 
 
 A questão que se levanta é: qual a melhor opção de compra para a empresa, levando-se em conta somente os dados de tempo de tempo de duração, mostrados acima?
 
-Bem, uma análise estatística do conjunto de dados pode trazer informações valiosas para responder essa questão.  Para realizar essa análise, existem diversas ferramentas, como o tradicional excel, o software R, diversas bibliotecas Python. Nesse exemplo, vamos trabalhar com essa última opção, cujo código está disponível aqui. 
+Bem, uma análise estatística do conjunto de dados pode trazer informações valiosas para responder essa questão.  Para realizar essa análise, existem diversas ferramentas, como o tradicional excel, o software R, diversas bibliotecas Python. Nesse exemplo, vamos trabalhar com essa última opção, cujo código está disponível [aqui](https://github.com/gallileugenesis/qual_lampada_comprar). 
 
 Bem, vamos começar com uma descrição estatística básica dos dados:
 
@@ -36,15 +36,11 @@ Bem, vamos começar com uma descrição estatística básica dos dados:
 
 
 
-![image-20220325135835528](C:\Users\galil\AppData\Roaming\Typora\typora-user-images\image-20220325135835528.png)
-
-
-
 O que esses dados nos dizem? Bom, primeiro, a média de duração da lâmpada A é de 909,65 horas, ao passo que a lâmpada B dura, em média, 1018,35 horas, como também está mostrado na figura abaixo. Isso significa que, para esse conjunto de dados,  as lâmpadas do tipo B duram em média, 12% a mais do que as lâmpadas A.  
 
 ![tempo_medio](D:\galil\OneDrive - Universidade Federal de Pernambuco\Data_Science\Portfolio\Blog\posts\applications\qual_lampada_comprar\figuras\tempo_medio.png)
 
-Então devemos escolher a lâmpada B, não é? Bem... Não tão depressa. A média é uma medida que pode te enganar as vezes. Ela, por si só, embora as vezes deem indicações corretas, não deve embasar jamais suas decisões.
+Então devemos escolher a lâmpada B, não é? Bem... Não tão depressa. A média é uma medida que pode te enganar em algumas ocasiões. Ela, por si só, embora as vezes deem indicações corretas, não deve embasar jamais suas decisões.
 
 Um outro ponto a se destacar é que os tempos de duração das duas lâmpadas tem desvios padrão bem parecidos, com valores de 94,3 e 96,9, para A e B, respectivamente. Isso equivale a uma diferença de apenas 2%. Ou seja, a variabilidade das medições em torno de suas respectivas médias são semelhantes. 
 
@@ -56,7 +52,7 @@ Para analisar melhor os quartis, vamos recorrer ao boxplot desses dados.
 
 A figura do boxplot ilustra o que já temos discutido com relação a média, desvio padrão, valores máximos e mínimos. Até aqui, todos os indícios nos levam a crer que a Lâmpada B é a melhor opção. Mas, sigamos com a análise.
 
-Pode-se notar que, para a lâmpada A, 25% das amostram tem tempo de duração de no máximo 857 horas, 50% duram até 916 e, por fim, 75% tem duração de até 971 horas. Já para a lâmpada B, esses valores são de 950,1015 e 1085, respectivamente. Ou seja, as estatísticas absolutas da lâmpada B são melhores do que as de A. 
+Pode-se notar que, para a lâmpada A, 25% das amostram tem tempo de duração de no máximo 857 horas (1º quartil), 50% duram até 916 (2º quartil ou mediana) e, por fim, 75% tem duração de até 971 horas (3º quartil). Já para a lâmpada B, esses valores são de 950,1015 e 1085, respectivamente. Ou seja, as estatísticas absolutas da lâmpada B são melhores do que as de A. 
 
 Para finalizar essa análise gráfica, vamos dar uma olhada no histograma dos dados. 
 
@@ -66,21 +62,26 @@ O que vemos é que o histograma de B está deslocado para a direita, em relaçã
 
 As  maiores frequências do tempo de duração das lâmpadas do fabricante A estão ente 850 e 900 (10) e 900 e 950 (12) horas. Já no caso das lâmpadas B, ocorrem frequências parecidas entre 900 e 1150 (7 , 8 e 9). 
 
-Bem, até aqui tudo indica que a escolha das lâmpadas do fabricante B seria uma opção razoável, dada todas as informações expostas até aqui. No entanto, como lembrou [Nassim Taleb](https://en.wikipedia.org/wiki/Nassim_Nicholas_Taleb) em [Skin in the Game](https://www.amazon.com.br/Skin-Game-Hidden-Asymmetries-English-ebook/dp/B075HYVP7C/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=23MXAOK3O8NFO&keywords=Skin+in+the+Game&qid=1648564544&s=digital-text&sprefix=%2Cdigital-text%2C244&sr=1-1), essas medidas estatísticas sem intervalos de confiança não dizem muita coisa, uma vez que são estimativas pontuais da média populacional e não nos informa nada sobre a incerteza associada ao seu valor (o quão distãnte esse valor está do valor verdadeira da média populacional). O intervalo de confiança (IC) é calculado a partir das estatísticas dos dados observados e constitui uma faixa de valores que provavelmente contém um parâmetro populacional (média, mediana, etc) com um determinado nível de confiança. Pode-se entender também o IC como sendo à probabilidade de um parâmetro populacional cair entre um conjunto de valores por uma certa proporção de vezes. Desse modo, os IC medem o grau de incerteza ou certeza em um método de amostragem.
+Bem, até aqui tudo indica que a escolha das lâmpadas do fabricante B seria a opção mais plausível, dadas todas as informações expostas até o momento. No entanto, como lembrou [Nassim Taleb](https://en.wikipedia.org/wiki/Nassim_Nicholas_Taleb) em [Skin in the Game](https://www.amazon.com.br/Skin-Game-Hidden-Asymmetries-English-ebook/dp/B075HYVP7C/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=23MXAOK3O8NFO&keywords=Skin+in+the+Game&qid=1648564544&s=digital-text&sprefix=%2Cdigital-text%2C244&sr=1-1), essas medidas estatísticas sem intervalos de confiança não dizem muita coisa, uma vez que são estimativas pontuais dos parâmetros populacionais e não nos informam nada sobre a incerteza associada aos seus valores (o quão distante esse valor está verdadeiro parâmetro populacional). 
 
-Comumente se usa intervalos de confiança de 99% e 95%. Esses intervalos são conduzidos utilizando ferramentas estatísticas, como os testes t. 
+O intervalo de confiança (IC) é calculado a partir das estatísticas dos dados observados e constitui uma faixa de valores que provavelmente contém um parâmetro populacional (média, mediana, etc) com um determinado nível de confiança. Pode-se entender também o IC como sendo à probabilidade de um parâmetro populacional cair entre um conjunto de valores por uma certa proporção de vezes. Desse modo, os IC medem o grau de incerteza ou certeza em um método de amostragem.
 
-"Um intervalo de confiança de 95% me dirá que se tomarmos um número infinito de amostras de minha população, calcularmos o intervalo a cada vez, então em 95% desses intervalos, o intervalo conterá a verdadeira média da população. Assim, com uma amostra, podemos calcular a média da amostra e, a partir daí, obter um intervalo em torno dela, que provavelmente conterá a verdadeira média da população."
+Comumente se usa intervalos de confiança de 99% e 95%.  Por exemplo, quando dizemos que um intervalo de confiança é de 95%, queremos dizer que, se tomarmos um certo número de amostras aleatórias da população, calcularmos o intervalo a cada vez, então o verdadeiro parâmetro populacional analisado estará em 95% desses intervalos.
 
- Logo, vamos determinar o intervalo de confiança de 95% para as médias do tempo de duração de cada uma das lâmpadas. 
+Quando não conhecemos nada a respeito do comportamento de uma dada população, ou seja, quando não conhecemos os parâmetros populacionais, e dispomos somente das amostras de uma população, como é o caso na maioria das aplicações práticas e também no nosso exemplo a respeito do tempo de duração das lâmpadas, precisamos recorrer a   [Distribuição t de Student](https://pt.wikipedia.org/wiki/Distribuição_t_de_Student) para encontrar o intervalo de confiança. 
+
+Desse modo, para uma população com média $\mu$ e desvio padrão $\sigma$ desconhecidos, um intervalo de confiança, com um nível de confiança $C$, para a média populacional, com base em uma amostra aleatória simples (simple random sample, SRS) de tamanho $n$, é dado por,
+
+$$\=x \pm t^*\dfrac{s}{\sqrt(n)}$$, 
+
+onde $\=x$ e $s$ são a média e desvio padrão amostral, respectivamente, e $t^*$ é igual a $(1-C)/2$ e é denominado valor crítico superior para a distribuição $t$ com $n-1$ graus de liberdade, $t(n-1)$.
+
+Logo, vamos determinar o intervalo de confiança de 95% para as médias do tempo de duração de cada uma das lâmpadas. 
 
 
 
-Quando não conhecemos nada a respeito do comportamento de uma dada população, ou seja, quando não conhecemeos os parâmetros populacionais, e dispomos somente das amostras de uma população, como é o nosso caso a respeito do tempo de duração das lâmpadas, precisamos recorrer a distribuilção t para encontrar o intervalo de confiança. 
+ 
 
-
-
-"O intervalo de confiança informa o quanto você está confiante em seus resultados. Com qualquer pesquisa ou experimento, você nunca tem 100% de certeza de que seus resultados podem ser repetidos. Se você tem 95% de certeza, ou 98% de certeza, isso geralmente é considerado “bom o suficiente” nas estatísticas. Essa porcentagem de certeza é o intervalo de confiança."
 
 
 
