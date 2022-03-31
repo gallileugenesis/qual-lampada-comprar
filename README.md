@@ -31,7 +31,7 @@ Bem, vamos começar com uma descrição estatística básica dos dados:
 
 O que esses dados nos dizem? Bom, primeiro, a média de duração da lâmpada A é de 909,65 horas, ao passo que a lâmpada B dura, em média, 1018,35 horas, como também está mostrado na figura abaixo. Isso significa que, para esse conjunto de dados,  as lâmpadas do tipo B duram em média, 12% a mais do que as lâmpadas A.  
 
-![tempo_medio](D:\galil\OneDrive - Universidade Federal de Pernambuco\Data_Science\Portfolio\Blog\posts\applications\qual_lampada_comprar\figuras\tempo_medio.png)
+![tempo_medio.png](https://github.com/gallileugenesis/qual_lampada_comprar/blob/main/figuras/tempo_medio.png?raw=true)
 
 Então devemos escolher a lâmpada B, não é? Bem... Não tão depressa. A média é uma medida que pode te enganar em algumas ocasiões. Ela, por si só, embora as vezes deem indicações corretas, não deve embasar jamais suas decisões.
 
@@ -41,7 +41,7 @@ Sigamos com a análise e olhemos agora para os valores mínimos observados. No c
 
 Para analisar melhor os quartis, vamos recorrer ao boxplot desses dados.
 
-![boxplot](D:\galil\OneDrive - Universidade Federal de Pernambuco\Data_Science\Portfolio\Blog\posts\applications\qual_lampada_comprar\figuras\boxplot.png)
+![boxplot.png](https://github.com/gallileugenesis/qual_lampada_comprar/blob/main/figuras/boxplot.png?raw=true)
 
 A figura do boxplot ilustra o que já temos discutido com relação a média, desvio padrão, valores máximos e mínimos. Até aqui, todos os indícios nos levam a crer que a Lâmpada B é a melhor opção. Mas, sigamos com a análise.
 
@@ -49,11 +49,7 @@ Pode-se notar que, para a lâmpada A, 25% das amostram tem tempo de duração de
 
 Para finalizar essa análise gráfica, vamos dar uma olhada no histograma dos dados. 
 
-<img src="D:\galil\OneDrive - Universidade Federal de Pernambuco\Data_Science\Portfolio\Blog\posts\applications\qual_lampada_comprar\figuras\hist.png" style="height: 100px; width:100px;"/>
-
-
-
-![hist](D:\galil\OneDrive - Universidade Federal de Pernambuco\Data_Science\Portfolio\Blog\posts\applications\qual_lampada_comprar\figuras\hist.png)
+![hist.png](https://github.com/gallileugenesis/qual_lampada_comprar/blob/main/figuras/hist.png?raw=true)
 
 O que vemos é que o histograma de B está deslocado para a direita, em relação a A, como já indicavam as análises anteriores. Isso indica que a média de duração das lâmpadas desse fabricante é maior. A dispersão dos dados são semelhantes, como já citado. Os dados também seguem uma distribuição aproximadamente normal. 
 
