@@ -84,20 +84,21 @@ O processo de estimativa pode ser realizado...
 
 Vamos então encontrar os intervalos de confiança para a médias das amostras A e B,  com um nível de confiança de 95%. Nesse caso, temos os seguintes resultados:
 
+Para as lâpadas do fabricante A, espera-se, com 95% de confiança, que a média esteja entre 879.49 e 939.81.
 
+Já para as lâmpadas do fabricante B, esse intervalo está entre [987.36 e 1049.34], para o mesmo nível de confiança.
 
- (879.49, 939.81)
-
-(987.36, 1049.34)
-
-
-
+Percebemos que o limite inferior de B é maior que o limite superior de A. Logo, agora com um maior nível de segurança, podemos afirma que a melhor opção de compra são as lâmpadas do fabricante B!
 
 
 
-https://colab.research.google.com/drive/1GwnVO5BZyrcpK_gwgUgp_Mwafb-xmOSU?usp=sharing
+Muito obrigado por ler esse artigo. 
 
-https://www.youtube.com/watch?v=xYIVK12iuTM
+Caso tenha interesse, você pode me encontrar no [GitHub](https://github.com/gallileugenesis) e [Linkedin](https://www.linkedin.com/in/gallileugenesis/).
+
+
+
+
 
 
 
