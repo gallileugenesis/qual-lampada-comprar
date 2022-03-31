@@ -49,6 +49,10 @@ Pode-se notar que, para a lâmpada A, 25% das amostram tem tempo de duração de
 
 Para finalizar essa análise gráfica, vamos dar uma olhada no histograma dos dados. 
 
+<img src="D:\galil\OneDrive - Universidade Federal de Pernambuco\Data_Science\Portfolio\Blog\posts\applications\qual_lampada_comprar\figuras\hist.png" style="height: 100px; width:100px;"/>
+
+
+
 ![hist](D:\galil\OneDrive - Universidade Federal de Pernambuco\Data_Science\Portfolio\Blog\posts\applications\qual_lampada_comprar\figuras\hist.png)
 
 O que vemos é que o histograma de B está deslocado para a direita, em relação a A, como já indicavam as análises anteriores. Isso indica que a média de duração das lâmpadas desse fabricante é maior. A dispersão dos dados são semelhantes, como já citado. Os dados também seguem uma distribuição aproximadamente normal. 
