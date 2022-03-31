@@ -76,20 +76,28 @@ $$\=x \pm t^*\dfrac{s}{\sqrt(n)}$$,
 
 onde $\=x$ e $s$ são a média e desvio padrão amostral, respectivamente, e $t^*$ é igual a $(1-C)/2$ e é denominado valor crítico superior para a distribuição $t$ com $n-1$ graus de liberdade, $t(n-1)$.
 
-Logo, vamos determinar o intervalo de confiança de 95% para as médias do tempo de duração de cada uma das lâmpadas. 
+![img](http://www.stat.yale.edu/Courses/1997-98/101/confdiag.gif)
+
+O processo de estimativa pode ser realizado...
 
 
 
- 
+Vamos então encontrar os intervalos de confiança para a médias das amostras A e B,  com um nível de confiança de 95%. Nesse caso, temos os seguintes resultados:
+
+
+
+ (879.49, 939.81)
+
+(987.36, 1049.34)
 
 
 
 
-http://www.stat.yale.edu/Courses/1997-98/101/confint.htm
+
 
 https://colab.research.google.com/drive/1GwnVO5BZyrcpK_gwgUgp_Mwafb-xmOSU?usp=sharing
 
 https://www.youtube.com/watch?v=xYIVK12iuTM
 
-https://docs.ufpr.br/~jomarc/intervaloeteste.pdf
+
 
