@@ -1,13 +1,6 @@
----
-layout: post
-title:  "qual lâmpada comprar?"
-date:   2022-03-22 00:00
-category:  
-icon: www
-keywords: análise de dados, ciência de dados, estatística 
-image: 1.png
-preview: 0
----
+# Qual lâmpada comprar?
+
+
 
 Imaginem a seguinte situação: uma empresa está se preparando para comprar uma grande quantidade de lâmpadas para um de seus novos empreendimentos. 
 
@@ -77,10 +70,6 @@ $$\=x \pm t^*\dfrac{s}{\sqrt(n)}$$,
 onde $\=x$ e $s$ são a média e desvio padrão amostral, respectivamente, e $t^*$ é igual a $(1-C)/2$ e é denominado valor crítico superior para a distribuição $t$ com $n-1$ graus de liberdade, $t(n-1)$.
 
 ![img](http://www.stat.yale.edu/Courses/1997-98/101/confdiag.gif)
-
-O processo de estimativa pode ser realizado...
-
-
 
 Vamos então encontrar os intervalos de confiança para a médias das amostras A e B,  com um nível de confiança de 95%. Nesse caso, temos os seguintes resultados:
 
