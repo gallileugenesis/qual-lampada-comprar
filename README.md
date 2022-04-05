@@ -1,12 +1,10 @@
 # Qual lâmpada comprar?
 
-
-
 Imaginem a seguinte situação: uma empresa está se preparando para comprar uma grande quantidade de lâmpadas para um de seus novos empreendimentos. 
 
 Essa empresa recebe então os dados do tempo de duração, em horas,  de lâmpadas de dois fabricantes diferentes, A e B, como mostra a tabela abaixo. 
 
-![df.png](https://github.com/gallileugenesis/qual_lampada_comprar/blob/main/figuras/df.png?raw=true)
+![df.png](https://github.com/gallileugenesis/qual_lampada_comprar/blob/main/figuras/df.png?raw=true,style=centerme)
 
 Ao todo, o banco de dados contém 40 entradas com os respectivos tempos de duração das lâmpadas A e B. 
 
@@ -27,11 +25,9 @@ Bem, vamos começar com uma descrição estatística básica dos dados:
 |  75%  | 971.250000  | 1085.500000 |
 |  max  | 1093.000000 | 1230.000000 |
 
-
-
 O que esses dados nos dizem? Bom, primeiro, a média de duração da lâmpada A é de 909,65 horas, ao passo que a lâmpada B dura, em média, 1018,35 horas, como também está mostrado na figura abaixo. Isso significa que, para esse conjunto de dados,  as lâmpadas do tipo B duram em média, 12% a mais do que as lâmpadas A.  
 
-![tempo_medio.png](https://github.com/gallileugenesis/qual_lampada_comprar/blob/main/figuras/tempo_medio.png?raw=true)
+![tempo_medio.png](https://github.com/gallileugenesis/qual_lampada_comprar/blob/main/figuras/tempo_medio.png?raw=truestyle=centerme)
 
 Então devemos escolher a lâmpada B, não é? Bem... Não tão depressa. A média é uma medida que pode te enganar em algumas ocasiões. Ela, por si só, embora as vezes deem indicações corretas, não deve embasar jamais suas decisões.
 
@@ -41,7 +37,7 @@ Sigamos com a análise e olhemos agora para os valores mínimos observados. No c
 
 Para analisar melhor os quartis, vamos recorrer ao boxplot desses dados.
 
-![boxplot.png](https://github.com/gallileugenesis/qual_lampada_comprar/blob/main/figuras/boxplot.png?raw=true)
+![boxplot.png](https://github.com/gallileugenesis/qual_lampada_comprar/blob/main/figuras/boxplot.png?raw=truestyle=centerme)
 
 A figura do boxplot ilustra o que já temos discutido com relação a média, desvio padrão, valores máximos e mínimos. Até aqui, todos os indícios nos levam a crer que a Lâmpada B é a melhor opção. Mas, sigamos com a análise.
 
@@ -49,7 +45,7 @@ Pode-se notar que, para a lâmpada A, 25% das amostram tem tempo de duração de
 
 Para finalizar essa análise gráfica, vamos dar uma olhada no histograma dos dados. 
 
-![hist.png](https://github.com/gallileugenesis/qual_lampada_comprar/blob/main/figuras/hist.png?raw=true)
+![hist.png](https://github.com/gallileugenesis/qual_lampada_comprar/blob/main/figuras/hist.png?raw=truestyle=centerme)
 
 O que vemos é que o histograma de B está deslocado para a direita, em relação a A, como já indicavam as análises anteriores. Isso indica que a média de duração das lâmpadas desse fabricante é maior. A dispersão dos dados são semelhantes, como já citado. Os dados também seguem uma distribuição aproximadamente normal. 
 
@@ -65,9 +61,9 @@ Quando não conhecemos nada a respeito do comportamento de uma dada população,
 
 Desse modo, para uma população com média $\mu$ e desvio padrão $\sigma$ desconhecidos, um intervalo de confiança, com um nível de confiança $C$, para a média populacional, com base em uma amostra aleatória simples (simple random sample, SRS) de tamanho $n$, é dado por,
 
-$$\=x \pm t^*\dfrac{s}{\sqrt(n)}$$, 
+$IC = \overline{x} \pm t^*\dfrac{s}{\sqrt n}$$, 
 
-onde $\=x$ e $s$ são a média e desvio padrão amostral, respectivamente, e $t^*$ é igual a $(1-C)/2$ e é denominado valor crítico superior para a distribuição $t$ com $n-1$ graus de liberdade, $t(n-1)$.
+onde $\overline{x}$ e $s$ são a média e desvio padrão amostral, respectivamente, e $t^*$ é igual a $(1-C)/2$ e é denominado valor crítico superior para a distribuição $t$ com $n-1$ graus de liberdade, $t(n-1)$.
 
 ![img](http://www.stat.yale.edu/Courses/1997-98/101/confdiag.gif)
 
@@ -75,11 +71,9 @@ Vamos então encontrar os intervalos de confiança para a médias das amostras A
 
 Para as lâpadas do fabricante A, espera-se, com 95% de confiança, que a média esteja entre 879.49 e 939.81.
 
-Já para as lâmpadas do fabricante B, esse intervalo está entre [987.36 e 1049.34], para o mesmo nível de confiança.
+Já para as lâmpadas do fabricante B, esse intervalo está entre 987.36 e 1049.34, para o mesmo nível de confiança.
 
 Percebemos que o limite inferior de B é maior que o limite superior de A. Logo, agora com um maior nível de segurança, podemos afirma que a melhor opção de compra são as lâmpadas do fabricante B!
-
-
 
 Muito obrigado por ler esse artigo. 
 
